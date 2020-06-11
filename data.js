@@ -5,7 +5,7 @@ var fs = require('fs');
 API.login(email, password).then((output) => {
   console.log(output);
   API.MWcombatwz('bearownage', API.platforms.psn).then((data) => {
-    fs.writeFile("data.txt", data, function(err) {
+    fs.writeFile("data.txt", JSON.stringify(data), function(err) {
       if (err) {
         console.log(err);
       }
